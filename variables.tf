@@ -38,3 +38,15 @@ variable "mngt_params" {
   })
   description = "my mngtservers variables"
 }
+
+variable "cidr" {
+  type        = list(string)
+  description = "cidr_allowed"
+  default     = ["0.0.0.0/0"]
+}
+
+variable "nsg_ports" {
+  type        = list(number)
+  description = "list of ports"
+  default     = [22, 80]
+}
